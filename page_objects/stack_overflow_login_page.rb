@@ -11,7 +11,7 @@ class StackOverflowLoginPage < BasePage
     @driver.manage.timeouts.implicit_wait = 2
   end
 
-  def visit_login_page
+  def visit
     @driver.navigate.to ENV['base_url']
   end
 
@@ -34,10 +34,6 @@ class StackOverflowLoginPage < BasePage
 
   def get_error_message
      @driver.find_element(selectors[:INCORRECT_CREDENTIALS]).text
-  end
-
-  def quit
-    @driver.quit
   end
 
   private

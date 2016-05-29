@@ -18,7 +18,7 @@ describe 'Testing Stack overflow login page' do
 
   context 'When login to stack overflow with incorrect password or user' do
     it 'should show the correct error message' do
-      login_page.visit_login_page
+      login_page.visit
       login_page.type_user_mail(entry_data[:user_email])
       login_page.type_password(entry_data[:user_password])
       login_page.submit_login
@@ -28,7 +28,7 @@ describe 'Testing Stack overflow login page' do
 
   context 'When login to stack overflow without filling password field' do
     it 'should show the correct error message' do
-      login_page.visit_login_page
+      login_page.visit
       login_page.type_user_mail(entry_data[:user_email])
       login_page.type_password('')
       login_page.submit_login
@@ -38,7 +38,7 @@ describe 'Testing Stack overflow login page' do
 
   context 'When login to stack overflow without filling email field' do
     it 'should show the correct error message' do
-      login_page.visit_login_page
+      login_page.visit
       login_page.type_user_mail('')
       login_page.type_password(entry_data[:user_password])
       login_page.submit_login

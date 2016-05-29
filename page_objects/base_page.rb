@@ -8,4 +8,8 @@ class BasePage
   def click_on(locator)
     @driver.find_element(locator).click
   end
+
+  def quit
+    @driver.quit
+  end
 end
