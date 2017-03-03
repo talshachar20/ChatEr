@@ -1,7 +1,9 @@
-# Project Name
-TODO: Write a project description
-## Installation
-TODO: Describe the installation process
+# Chat Erasys e2e
+This project tests main flows of Erasys chat, using Selenium 2, Ruby and Rspec
+## Prepare && run
+1. run 'bundle install' to download all required gems
+2. run 'rspec' to run all spec. or 'rspec path_to_file:line' for a specific spec
+3. override url with "base_url" env param. (Example: 'base_url=url.com rspec')
 ## Usage
 TODO: Write usage instructions
 ## Contributing

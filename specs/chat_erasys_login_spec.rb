@@ -1,9 +1,9 @@
 require 'rspec'
-require_relative '../page_objects/stack_overflow_login_page'
+require_relative '../page_objects/chat_erasys_login_page'
 
-describe 'Testing Stack overflow login page' do
+describe 'Testing Chat Erasys login page' do
   let(:login_page) {
-    StackOverflowLoginPage.new(Selenium::WebDriver.for :chrome)
+    ChatErasysLoginPage.new(Selenium::WebDriver.for :chrome)
   }
   let(:entry_data) {
     {
@@ -16,7 +16,7 @@ describe 'Testing Stack overflow login page' do
     login_page.quit
   end
 
-  context 'When login to stack overflow with incorrect password or user' do
+  context 'When login to chat erasys with incorrect password or user' do
     it 'should show the correct error message' do
       login_page.visit
       login_page.type_user_mail(entry_data[:user_email])
@@ -26,7 +26,7 @@ describe 'Testing Stack overflow login page' do
     end
   end
 
-  context 'When login to stack overflow without filling password field' do
+  context 'When login to chat erasys without filling password field' do
     it 'should show the correct error message' do
       login_page.visit
       login_page.type_user_mail(entry_data[:user_email])
@@ -36,7 +36,7 @@ describe 'Testing Stack overflow login page' do
     end
   end
 
-  context 'When login to stack overflow without filling email field' do
+  context 'When login to chat erasys without filling email field' do
     it 'should show the correct error message' do
       login_page.visit
       login_page.type_user_mail('')

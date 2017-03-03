@@ -1,8 +1,8 @@
 require_relative 'base_page'
 
-class StackOverflowLoginPage < BasePage
+class ChatErasysLoginPage < BasePage
   attr_accessor :driver, :selectors
-  ENV['base_url'] = 'https://stackoverflow.com/users/login'
+  ENV['base_url'] = 'https://chaterasys.com/login' #imaginary url
   @driver = nil
 
   def initialize(driver)
